@@ -1,6 +1,5 @@
 package rest.ws;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +34,9 @@ public class AlumnoServiceController {
 		List<Alumno> lista = (java.util.List<Alumno>) this.alumnoDao.obtenerTodosAlumnos();
 		ResponseEntity<List<Alumno>> response;
 		if (lista == null) {
-			response = new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			response = new ResponseEntity<List<Alumno>>(HttpStatus.NOT_FOUND);
         } else {
-            response = new ResponseEntity<>(lista, HttpStatus.OK);
+            response = new ResponseEntity<List<Alumno>>(lista, HttpStatus.OK);
         }
         return response;
 	}
@@ -47,9 +46,9 @@ public class AlumnoServiceController {
 		Alumno alumno = this.alumnoDao.obtenerAlumno(dni);
         ResponseEntity<Alumno> response;
         if (alumno == null) {
-            response = new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            response = new ResponseEntity<Alumno>(HttpStatus.NOT_FOUND);
         } else {
-            response = new ResponseEntity<>(alumno, HttpStatus.OK);
+            response = new ResponseEntity<Alumno>(alumno, HttpStatus.OK);
         }
         return response;
 	}

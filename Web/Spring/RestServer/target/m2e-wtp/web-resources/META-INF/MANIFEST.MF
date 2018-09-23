@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: fmartin.pr
-Build-Jdk: 1.7.0_79
+Built-By: fmartin
+Build-Jdk: 1.8.0_181
 Created-By: Maven Integration for Eclipse
 
